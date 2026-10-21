@@ -1,0 +1,486 @@
+{
+  "data": {
+    "37fa4c58-97c6-11f1-a6a6-639d9c4bace6": {
+      "anyonwiki_code": [1,1,0,1,1,1,1],
+      "base_field": "QQBar",
+      "embedding": null,
+      "f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": "-1_1__1"
+      },
+      "fusion_ring": "d7fdd80e-812e-11f1-88b9-f33952cbf9ff",
+      "gauge_split_basis": null,
+      "gauge_split_transform": null,
+      "in_minimal_field": null,
+      "in_unitary_gauge": true,
+      "is_braided": true,
+      "is_modular": true,
+      "is_pivotal": true,
+      "is_spherical": true,
+      "is_unitary": true,
+      "minimal_fields": null,
+      "names": {
+        "group_like": null,
+        "miscellaneous": null,
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "non_trivial_sub_fusion_cats": null,
+      "numeric_f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": [1.0,0.0]
+      },
+      "numeric_p_symbols": {
+        "1": [1.0,0.0]
+      },
+      "numeric_quantum_dimensions": [[1.0,0.0]],
+      "numeric_r_symbols": {
+        "1_1_1_1_1": "-1_1__1"
+      },
+      "numeric_s_matrix": [[[1.0,0.0]]],
+      "numeric_twists": [[0.0,0.0]],
+      "p_symbols": {
+        "1": "-1_1__1"
+      },
+      "quantum_dimensions": ["-1_1__1"],
+      "r_symbols": {
+        "1_1_1_1_1": "-1_1__1"
+      },
+      "realizations": {},
+      "references": {
+        "All": "arXiv:2405.20075"
+      },
+      "s_matrix": [["-1_1__1"]],
+      "software": {
+        "All": "https://doi.org/10.5281/zenodo.10686859"
+      },
+      "tex_names": {
+        "group_like": null,
+        "miscellaneous": ["[\\text{Trivial}]_{1,1,1}"],
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "twists": ["0_1__1"],
+      "uuid": "37fa4c58-97c6-11f1-a6a6-639d9c4bace6"
+    },
+    "37fa4d16-97c6-11f1-9c13-c70bad3f9e94": {
+      "anyonwiki_code": [2,1,0,1,1,1,1],
+      "base_field": "QQBar",
+      "embedding": null,
+      "f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": "-1_1__1",
+        "1_1_2_2_1_1_1_2_1_1": "-1_1__1",
+        "1_2_1_2_2_1_1_2_1_1": "-1_1__1",
+        "1_2_2_1_2_1_1_1_1_1": "-1_1__1",
+        "2_1_1_2_2_1_1_1_1_1": "-1_1__1",
+        "2_1_2_1_2_1_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1_1_1_2_1_1": "-1_1__1",
+        "2_2_2_2_1_1_1_1_1_1": "1_1__1"
+      },
+      "fusion_ring": "d810876c-812e-11f1-9999-b9a2d35bb71a",
+      "gauge_split_basis": null,
+      "gauge_split_transform": null,
+      "in_minimal_field": null,
+      "in_unitary_gauge": true,
+      "is_braided": true,
+      "is_modular": true,
+      "is_pivotal": true,
+      "is_spherical": true,
+      "is_unitary": true,
+      "minimal_fields": null,
+      "names": {
+        "group_like": null,
+        "miscellaneous": null,
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "non_trivial_sub_fusion_cats": null,
+      "numeric_f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": [1.0,0.0],
+        "1_1_2_2_1_1_1_2_1_1": [1.0,0.0],
+        "1_2_1_2_2_1_1_2_1_1": [1.0,0.0],
+        "1_2_2_1_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_1_2_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_2_1_2_1_1_2_1_1": [1.0,0.0],
+        "2_2_1_1_1_1_1_2_1_1": [1.0,0.0],
+        "2_2_2_2_1_1_1_1_1_1": [-1.0,0.0]
+      },
+      "numeric_p_symbols": {
+        "1": [1.0,0.0],
+        "2": [-1.0,0.0]
+      },
+      "numeric_quantum_dimensions": [[1.0,0.0],[1.0,0.0]],
+      "numeric_r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__2"
+      },
+      "numeric_s_matrix": [[[1.0,0.0],[1.0,0.0]],[[1.0,0.0],[-1.0,0.0]]],
+      "numeric_twists": [[0.0,0.0],[0.25,0.0]],
+      "p_symbols": {
+        "1": "-1_1__1",
+        "2": "1_1__1"
+      },
+      "quantum_dimensions": ["-1_1__1","-1_1__1"],
+      "r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__2"
+      },
+      "realizations": {},
+      "references": {
+        "All": "arXiv:2405.20075"
+      },
+      "s_matrix": [["-1_1__1","-1_1__1"],["-1_1__1","1_1__1"]],
+      "software": {
+        "All": "https://doi.org/10.5281/zenodo.10686859"
+      },
+      "tex_names": {
+        "group_like": null,
+        "miscellaneous": ["[\\mathbb{Z}_2]_{1,1,1}","[\\text{SU}(2)_1]_{1,1,1}","[\\text{TY}( \\mathbb{Z}_1)]_{1,1,1}","[\\left[I\\trianglelefteq I\\right]_{\\mathbf{1}|0}^{\\text{Id}}]_{1,1,1}"],
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "twists": ["0_1__1","-1_4__1"],
+      "uuid": "37fa4d16-97c6-11f1-9c13-c70bad3f9e94"
+    },
+    "37fa4d16-97c6-11f1-aa56-fb9bfd7beeb4": {
+      "anyonwiki_code": [2,1,0,1,1,1,2],
+      "base_field": "QQBar",
+      "embedding": null,
+      "f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": "-1_1__1",
+        "1_1_2_2_1_1_1_2_1_1": "-1_1__1",
+        "1_2_1_2_2_1_1_2_1_1": "-1_1__1",
+        "1_2_2_1_2_1_1_1_1_1": "-1_1__1",
+        "2_1_1_2_2_1_1_1_1_1": "-1_1__1",
+        "2_1_2_1_2_1_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1_1_1_2_1_1": "-1_1__1",
+        "2_2_2_2_1_1_1_1_1_1": "1_1__1"
+      },
+      "fusion_ring": "d810876c-812e-11f1-9999-b9a2d35bb71a",
+      "gauge_split_basis": null,
+      "gauge_split_transform": null,
+      "in_minimal_field": null,
+      "in_unitary_gauge": false,
+      "is_braided": true,
+      "is_modular": true,
+      "is_pivotal": true,
+      "is_spherical": true,
+      "is_unitary": false,
+      "minimal_fields": null,
+      "names": {
+        "group_like": null,
+        "miscellaneous": null,
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "non_trivial_sub_fusion_cats": null,
+      "numeric_f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": [1.0,0.0],
+        "1_1_2_2_1_1_1_2_1_1": [1.0,0.0],
+        "1_2_1_2_2_1_1_2_1_1": [1.0,0.0],
+        "1_2_2_1_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_1_2_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_2_1_2_1_1_2_1_1": [1.0,0.0],
+        "2_2_1_1_1_1_1_2_1_1": [1.0,0.0],
+        "2_2_2_2_1_1_1_1_1_1": [-1.0,0.0]
+      },
+      "numeric_p_symbols": {
+        "1": [1.0,0.0],
+        "2": [1.0,0.0]
+      },
+      "numeric_quantum_dimensions": [[1.0,0.0],[-1.0,0.0]],
+      "numeric_r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__2"
+      },
+      "numeric_s_matrix": [[[1.0,0.0],[-1.0,0.0]],[[-1.0,0.0],[-1.0,0.0]]],
+      "numeric_twists": [[0.0,0.0],[-0.25,0.0]],
+      "p_symbols": {
+        "1": "-1_1__1",
+        "2": "-1_1__1"
+      },
+      "quantum_dimensions": ["-1_1__1","1_1__1"],
+      "r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__2"
+      },
+      "realizations": {},
+      "references": {
+        "All": "arXiv:2405.20075"
+      },
+      "s_matrix": [["-1_1__1","1_1__1"],["1_1__1","1_1__1"]],
+      "software": {
+        "All": "https://doi.org/10.5281/zenodo.10686859"
+      },
+      "tex_names": {
+        "group_like": null,
+        "miscellaneous": ["[\\mathbb{Z}_2]_{1,1,2}","[\\text{SU}(2)_1]_{1,1,2}","[\\text{TY}( \\mathbb{Z}_1)]_{1,1,2}","[\\left[I\\trianglelefteq I\\right]_{\\mathbf{1}|0}^{\\text{Id}}]_{1,1,2}"],
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "twists": ["0_1__1","1_4__1"],
+      "uuid": "37fa4d16-97c6-11f1-aa56-fb9bfd7beeb4"
+    },
+    "37fa4d34-97c6-11f1-99a1-e3f41b8fcf8f": {
+      "anyonwiki_code": [2,1,0,1,1,2,1],
+      "base_field": "QQBar",
+      "embedding": null,
+      "f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": "-1_1__1",
+        "1_1_2_2_1_1_1_2_1_1": "-1_1__1",
+        "1_2_1_2_2_1_1_2_1_1": "-1_1__1",
+        "1_2_2_1_2_1_1_1_1_1": "-1_1__1",
+        "2_1_1_2_2_1_1_1_1_1": "-1_1__1",
+        "2_1_2_1_2_1_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1_1_1_2_1_1": "-1_1__1",
+        "2_2_2_2_1_1_1_1_1_1": "1_1__1"
+      },
+      "fusion_ring": "d810876c-812e-11f1-9999-b9a2d35bb71a",
+      "gauge_split_basis": null,
+      "gauge_split_transform": null,
+      "in_minimal_field": null,
+      "in_unitary_gauge": true,
+      "is_braided": true,
+      "is_modular": true,
+      "is_pivotal": true,
+      "is_spherical": true,
+      "is_unitary": true,
+      "minimal_fields": null,
+      "names": {
+        "group_like": null,
+        "miscellaneous": null,
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "non_trivial_sub_fusion_cats": null,
+      "numeric_f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": [1.0,0.0],
+        "1_1_2_2_1_1_1_2_1_1": [1.0,0.0],
+        "1_2_1_2_2_1_1_2_1_1": [1.0,0.0],
+        "1_2_2_1_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_1_2_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_2_1_2_1_1_2_1_1": [1.0,0.0],
+        "2_2_1_1_1_1_1_2_1_1": [1.0,0.0],
+        "2_2_2_2_1_1_1_1_1_1": [-1.0,0.0]
+      },
+      "numeric_p_symbols": {
+        "1": [1.0,0.0],
+        "2": [-1.0,0.0]
+      },
+      "numeric_quantum_dimensions": [[1.0,0.0],[1.0,0.0]],
+      "numeric_r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__1"
+      },
+      "numeric_s_matrix": [[[1.0,0.0],[1.0,0.0]],[[1.0,0.0],[-1.0,0.0]]],
+      "numeric_twists": [[0.0,0.0],[-0.25,0.0]],
+      "p_symbols": {
+        "1": "-1_1__1",
+        "2": "1_1__1"
+      },
+      "quantum_dimensions": ["-1_1__1","-1_1__1"],
+      "r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__1"
+      },
+      "realizations": {},
+      "references": {
+        "All": "arXiv:2405.20075"
+      },
+      "s_matrix": [["-1_1__1","-1_1__1"],["-1_1__1","1_1__1"]],
+      "software": {
+        "All": "https://doi.org/10.5281/zenodo.10686859"
+      },
+      "tex_names": {
+        "group_like": null,
+        "miscellaneous": ["[\\mathbb{Z}_2]_{1,2,1}","[\\text{SU}(2)_1]_{1,2,1}","[\\text{TY}( \\mathbb{Z}_1)]_{1,2,1}","[\\left[I\\trianglelefteq I\\right]_{\\mathbf{1}|0}^{\\text{Id}}]_{1,2,1}"],
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "twists": ["0_1__1","1_4__1"],
+      "uuid": "37fa4d34-97c6-11f1-99a1-e3f41b8fcf8f"
+    },
+    "37fa4e2e-97c6-11f1-aa03-3b817be52f72": {
+      "anyonwiki_code": [2,1,0,1,1,2,2],
+      "base_field": "QQBar",
+      "embedding": null,
+      "f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": "-1_1__1",
+        "1_1_2_2_1_1_1_2_1_1": "-1_1__1",
+        "1_2_1_2_2_1_1_2_1_1": "-1_1__1",
+        "1_2_2_1_2_1_1_1_1_1": "-1_1__1",
+        "2_1_1_2_2_1_1_1_1_1": "-1_1__1",
+        "2_1_2_1_2_1_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1_1_1_2_1_1": "-1_1__1",
+        "2_2_2_2_1_1_1_1_1_1": "1_1__1"
+      },
+      "fusion_ring": "d810876c-812e-11f1-9999-b9a2d35bb71a",
+      "gauge_split_basis": null,
+      "gauge_split_transform": null,
+      "in_minimal_field": null,
+      "in_unitary_gauge": false,
+      "is_braided": true,
+      "is_modular": true,
+      "is_pivotal": true,
+      "is_spherical": true,
+      "is_unitary": false,
+      "minimal_fields": null,
+      "names": {
+        "group_like": null,
+        "miscellaneous": null,
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "non_trivial_sub_fusion_cats": null,
+      "numeric_f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": [1.0,0.0],
+        "1_1_2_2_1_1_1_2_1_1": [1.0,0.0],
+        "1_2_1_2_2_1_1_2_1_1": [1.0,0.0],
+        "1_2_2_1_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_1_2_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_2_1_2_1_1_2_1_1": [1.0,0.0],
+        "2_2_1_1_1_1_1_2_1_1": [1.0,0.0],
+        "2_2_2_2_1_1_1_1_1_1": [-1.0,0.0]
+      },
+      "numeric_p_symbols": {
+        "1": [1.0,0.0],
+        "2": [1.0,0.0]
+      },
+      "numeric_quantum_dimensions": [[1.0,0.0],[-1.0,0.0]],
+      "numeric_r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__1"
+      },
+      "numeric_s_matrix": [[[1.0,0.0],[-1.0,0.0]],[[-1.0,0.0],[-1.0,0.0]]],
+      "numeric_twists": [[0.0,0.0],[0.25,0.0]],
+      "p_symbols": {
+        "1": "-1_1__1",
+        "2": "-1_1__1"
+      },
+      "quantum_dimensions": ["-1_1__1","1_1__1"],
+      "r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "1_0_1__1"
+      },
+      "realizations": {},
+      "references": {
+        "All": "arXiv:2405.20075"
+      },
+      "s_matrix": [["-1_1__1","1_1__1"],["1_1__1","1_1__1"]],
+      "software": {
+        "All": "https://doi.org/10.5281/zenodo.10686859"
+      },
+      "tex_names": {
+        "group_like": null,
+        "miscellaneous": ["[\\mathbb{Z}_2]_{1,2,2}","[\\text{SU}(2)_1]_{1,2,2}","[\\text{TY}( \\mathbb{Z}_1)]_{1,2,2}","[\\left[I\\trianglelefteq I\\right]_{\\mathbf{1}|0}^{\\text{Id}}]_{1,2,2}"],
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "twists": ["0_1__1","-1_4__1"],
+      "uuid": "37fa4e2e-97c6-11f1-aa03-3b817be52f72"
+    },
+    "37fa4e38-97c6-11f1-96af-3f698e299019": {
+      "anyonwiki_code": [2,1,0,1,2,1,1],
+      "base_field": "QQBar",
+      "embedding": null,
+      "f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": "-1_1__1",
+        "1_1_2_2_1_1_1_2_1_1": "-1_1__1",
+        "1_2_1_2_2_1_1_2_1_1": "-1_1__1",
+        "1_2_2_1_2_1_1_1_1_1": "-1_1__1",
+        "2_1_1_2_2_1_1_1_1_1": "-1_1__1",
+        "2_1_2_1_2_1_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1_1_1_2_1_1": "-1_1__1",
+        "2_2_2_2_1_1_1_1_1_1": "-1_1__1"
+      },
+      "fusion_ring": "d810876c-812e-11f1-9999-b9a2d35bb71a",
+      "gauge_split_basis": null,
+      "gauge_split_transform": null,
+      "in_minimal_field": null,
+      "in_unitary_gauge": true,
+      "is_braided": true,
+      "is_modular": false,
+      "is_pivotal": true,
+      "is_spherical": true,
+      "is_unitary": true,
+      "minimal_fields": null,
+      "names": {
+        "group_like": null,
+        "miscellaneous": null,
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "non_trivial_sub_fusion_cats": null,
+      "numeric_f_symbols": {
+        "1_1_1_1_1_1_1_1_1_1": [1.0,0.0],
+        "1_1_2_2_1_1_1_2_1_1": [1.0,0.0],
+        "1_2_1_2_2_1_1_2_1_1": [1.0,0.0],
+        "1_2_2_1_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_1_2_2_1_1_1_1_1": [1.0,0.0],
+        "2_1_2_1_2_1_1_2_1_1": [1.0,0.0],
+        "2_2_1_1_1_1_1_2_1_1": [1.0,0.0],
+        "2_2_2_2_1_1_1_1_1_1": [1.0,0.0]
+      },
+      "numeric_p_symbols": {
+        "1": [1.0,0.0],
+        "2": [1.0,0.0]
+      },
+      "numeric_quantum_dimensions": [[1.0,0.0],[1.0,0.0]],
+      "numeric_r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "-1_1__1"
+      },
+      "numeric_s_matrix": null,
+      "numeric_twists": null,
+      "p_symbols": {
+        "1": "-1_1__1",
+        "2": "-1_1__1"
+      },
+      "quantum_dimensions": ["-1_1__1","-1_1__1"],
+      "r_symbols": {
+        "1_1_1_1_1": "-1_1__1",
+        "1_2_2_1_1": "-1_1__1",
+        "2_1_2_1_1": "-1_1__1",
+        "2_2_1_1_1": "-1_1__1"
+      },
+      "realizations": {},
+      "references": {
+        "All": "arXiv:2405.20075"
+      },
+      "s_matrix": null,
+      "software": {
+        "All": "https://doi.org/10.5281/zenodo.10686859"
+      },
+      "tex_names": {
+        "group_like": null,
+        "miscellaneous": ["[\\mathbb{Z}_2]_{2,1,1}","[\\text{SU}(2)_1]_{2,1,1}","[\\text{TY}( \\mathbb{Z}_1)]_{2,1,1}","[\\left[I\\trianglelefteq I\\right]_{\\mathbf{1}|0}^{\\text{Id}}]_{2,1,1}"],
+        "physics": null,
+        "quantum_group_like": null
+      },
+      "twists": null,
+      "uuid": "37fa4e38-97c6-11f1-96af-3f698e299019"
+    }
+  },
+  "info": "List of multiplicity-free complex fusion categories.\n\n ",
+   "order": [
+    "37fa5c3e-97c6-11f1-8693-91f67133af96",
+    "37fa5642-97c6-11f1-9458-d142162199ed"
+   ]
+}
+
