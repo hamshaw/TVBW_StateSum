@@ -1,0 +1,122 @@
+# Regina - A Normal Surface Theory Calculator
+# Python Test Suite Component
+#
+# Copyright (c) 2015-2025, Ben Burton
+# For further details contact Ben Burton (bab@debian.org).
+#
+# Tests the independence and lifespans of engine-generated packets.
+#
+# This file is a single component of Regina's python test suite.  To run
+# the python test suite, move to the main python directory in the source
+# tree and run "make check".
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# As an exception, when this program is distributed through (i) the
+# App Store by Apple Inc.; (ii) the Mac App Store by Apple Inc.; or
+# (iii) Google Play by Google Inc., then that store may impose any
+# digital rights management, device limits and/or redistribution
+# restrictions that are required by its terms of service.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+class Watcher(PacketListener):
+    def __init__(self, packet, label):
+        PacketListener.__init__(self)
+        packet.setLabel(label)
+        packet.listen(self)
+    def packetBeingDestroyed(self, packet):
+        print('Destroying: ' + packet.label())
+
+
+print('Script variables #1')
+print('Step 1')
+a = Container(); aw1 = Watcher(a, 'a1')
+print('Step 2')
+b = PacketOfTriangulation3(); dummy = b.newSimplex(); bw1 = Watcher(b, 'b1')
+print('Step 3')
+c = Script(); cw1 = Watcher(c, 'c1')
+print('Step 4')
+a.append(b)
+print('Step 5')
+a.append(c)
+print('Step 6')
+dummy = c.addVariable('foo', b)
+print('Step 7')
+val = c.variableValue('foo')
+print('Step 8')
+a = None # destroys a1
+print('Step 9')
+# (b1 == val) and c1 are orphaned but alive
+print(b); print(b.label()); print(b.parent())
+print(c); print(c.label()); print(c.parent())
+
+print('Script variables #2')
+print('Step 1')
+a = Container(); aw2 = Watcher(a, 'a2')
+print('Step 2')
+b = PacketOfTriangulation3(); dummy = b.newSimplex(); bw2 = Watcher(b, 'b2')
+print('Step 3')
+c = Script(); cw2 = Watcher(c, 'c2') # destroys c1
+print('Step 4')
+a.append(b)
+print('Step 5')
+a.append(c)
+print('Step 6')
+dummy = c.addVariable('foo', a)
+print('Step 7')
+val = c.variableValue('foo') # destroys b1
+print('Step 8')
+a = None
+print('Step 9')
+val = None # destroys a
+print('Step 10')
+# b2 and c2 are orphaned but alive
+print(b); print(b.label()); print(b.parent())
+print(c); print(c.label()); print(c.parent())
+
+print('Example triangulation')
+print('Step 1')
+f = PacketOfSnapPeaTriangulation(ExampleSnapPea.figureEight()); fw = Watcher(f, 'f')
+print('Step 2')
+f = None # destroys f
+print('Step 3')
+
+print('Vertex link #1')
+print('Step 1')
+t = PacketOfTriangulation3(Example3.lens(7,1)); tw = Watcher(t, 't1')
+print('Step 2')
+v = t.vertex(0).buildLink()
+print('Step 3')
+t = None # destroys t1 but not v1
+print('Step 4')
+print(v.isoSig())
+
+print('Vertex link #2')
+print('Step 1')
+t = PacketOfTriangulation3(Example3.lens(7,1)); tw = Watcher(t, 't2')
+print('Step 2')
+v = t.vertex(0).buildLink() # destroys v1
+print('Step 3')
+t = None # destroys t2
+print('Step 4')
+v = None # destroys v2
+print('Step 5')
+
+# b2 and c2 are still alive at this point
+print(b); print(b.label()); print(b.parent())
+print(c); print(c.label()); print(c.parent())
+
+# Destroy their watchers now, so they do not try to call print() as the
+# entire python system is shutting down
+bw2 = None
+cw2 = None

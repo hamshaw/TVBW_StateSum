@@ -1,0 +1,179 @@
+# Regina - A Normal Surface Theory Calculator
+# Python Test Suite Component
+#
+# Copyright (c) 2015-2025, Ben Burton
+# For further details contact Ben Burton (bab@debian.org).
+#
+# Provides tests for the wrapping of Packet subclasses through shared_ptr
+#
+# This file is a single component of Regina's python test suite.  To run
+# the python test suite, move to the main python directory in the source
+# tree and run "make check".
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# As an exception, when this program is distributed through (i) the
+# App Store by Apple Inc.; (ii) the Mac App Store by Apple Inc.; or
+# (iii) Google Play by Google Inc., then that store may impose any
+# digital rights management, device limits and/or redistribution
+# restrictions that are required by its terms of service.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+# NOTE: Since Regina 5.96, python references to packets never expire.
+# Therefore we should never raise any exceptions in this test.
+
+print()
+print("-----------------------------------------------------------")
+print("Basic:")
+print()
+
+print(PacketOfTriangulation3(Example3.poincare()).isoSig())
+print(Text("Hello World"))
+print(Text("Hello World").text())
+
+print()
+print("-----------------------------------------------------------")
+print("Basic container tests:")
+print()
+
+t1 = PacketOfTriangulation3()
+t2 = PacketOfTriangulation3(Example3.poincare())
+t3 = PacketOfTriangulation3(Example3.figureEight())
+p = Attachment()
+
+t = Text()
+
+c = Container()
+c.prepend(t1)
+
+print(c.countChildren())
+
+print(t1.isoSig())
+dummy = t1.newTetrahedron()
+dummy = None
+
+print(c.firstChild())
+print(c.firstChild().isoSig())
+
+t1 = None
+
+print(c.firstChild().isoSig())
+
+temp = c.lastChild()
+
+dummy = temp.newTetrahedron()
+dummy = None
+
+print(temp.isoSig())
+
+print()
+print("-----------------------------------------------------------")
+print("Erasing container:")
+print()
+
+c = None
+
+try:
+    print(temp.isoSig())
+except RuntimeError:
+    print("Got exception")
+
+print()
+print("-----------------------------------------------------------")
+print("Nested tests:")
+print()
+
+t2.prepend(t3)
+t2.prepend(p)
+p.append(t)
+t.setText("Hello World")
+
+print(t.text())
+
+p.lastChild().setText("Text set")
+
+l = p.firstChild()
+
+print(l.text())
+
+t2.insert(Text("New"), t3)
+
+print(t2.countChildren())
+print(t2.countDescendants())
+
+m = l.root()
+
+print(m == t2)
+
+print(m.isoSig())
+
+m = None
+
+print(p.isNull())
+
+print(p.totalTreeSize())
+
+it = t2
+
+while it:
+    print(it)
+    it = it.nextTreePacket()
+
+t2 = None
+
+print()
+print("Erase nested:")
+print("-----------------------------------------------------------")
+print()
+
+try:
+    print(l)
+except RuntimeError:
+    print("Got exception")
+
+try:
+    print(t3)
+except RuntimeError:
+    print("Got exception")
+
+print()
+print("Make orphan:")
+print("-----------------------------------------------------------")
+print()
+
+d1 = Triangulation3(); dummy = d1.newTetrahedron(); dummy = None
+d2 = Triangulation3(); dummy = d2.newTetrahedra(2); dummy = None
+d3 = Triangulation3(); dummy = d3.newTetrahedra(3); dummy = None
+p1 = PacketOfTriangulation3(d1)
+p2 = PacketOfTriangulation3(d2)
+p3 = PacketOfTriangulation3(d3)
+p1.append(p2)
+p2.append(p3)
+
+print(p1)
+print(p2)
+print(p3)
+
+p2.makeOrphan()
+print(p1)
+print(p2)
+print(p3)
+
+try:
+    p2 = None
+    print(p1)
+    print(p2)
+    print(p3)
+except RuntimeError:
+    print("Got exception")
+

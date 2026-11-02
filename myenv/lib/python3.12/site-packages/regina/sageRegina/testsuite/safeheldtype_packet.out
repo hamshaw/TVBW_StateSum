@@ -1,0 +1,58 @@
+
+-----------------------------------------------------------
+Basic:
+
+fvPQcdecedekrsnrs
+Text of length 11
+Hello World
+
+-----------------------------------------------------------
+Basic container tests:
+
+1
+a
+Bounded orientable 3-D triangulation, f = ( 4 6 4 1 )
+baa
+baa
+baabaa
+
+-----------------------------------------------------------
+Erasing container:
+
+baabaa
+
+-----------------------------------------------------------
+Nested tests:
+
+Hello World
+Text set
+3
+4
+True
+fvPQcdecedekrsnrs
+True
+2
+Closed orientable 3-D triangulation, f = ( 1 6 10 5 )
+Empty attachment
+Text of length 8
+Ideal orientable 3-D triangulation, f = ( 1 2 4 2 )
+Text of length 3
+
+Erase nested:
+-----------------------------------------------------------
+
+Text of length 8
+Ideal orientable 3-D triangulation, f = ( 1 2 4 2 )
+
+Make orphan:
+-----------------------------------------------------------
+
+Bounded orientable 3-D triangulation, f = ( 4 6 4 1 )
+Bounded orientable 3-D triangulation, f = ( 8 12 8 2 )
+Bounded orientable 3-D triangulation, f = ( 12 18 12 3 )
+Bounded orientable 3-D triangulation, f = ( 4 6 4 1 )
+Bounded orientable 3-D triangulation, f = ( 8 12 8 2 )
+Bounded orientable 3-D triangulation, f = ( 12 18 12 3 )
+Bounded orientable 3-D triangulation, f = ( 4 6 4 1 )
+None
+Bounded orientable 3-D triangulation, f = ( 12 18 12 3 )

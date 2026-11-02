@@ -1,0 +1,126 @@
+# Regina - A Normal Surface Theory Calculator
+# Python Test Suite Component
+#
+# Copyright (c) 2019-2025, Ben Burton
+# For further details contact Ben Burton (bab@debian.org).
+#
+# Tests custom python iterators.
+#
+# This file is a single component of Regina's python test suite.  To run
+# the python test suite, move to the main python directory in the source
+# tree and run "make check".
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# As an exception, when this program is distributed through (i) the
+# App Store by Apple Inc.; (ii) the Mac App Store by Apple Inc.; or
+# (iii) Google Play by Google Inc., then that store may impose any
+# digital rights management, device limits and/or redistribution
+# restrictions that are required by its terms of service.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+root = Container(); root.setLabel('root')
+a = Container(); a.setLabel('a')
+aa = Container(); aa.setLabel('aa')
+aaa = Container(); aaa.setLabel('aaa')
+aab = Container(); aab.setLabel('aab')
+ab = Container(); ab.setLabel('ab')
+aba = Container(); aba.setLabel('aba')
+abb = Container(); abb.setLabel('abb')
+b = Container(); b.setLabel('b')
+ba = Container(); ba.setLabel('ba')
+baa = Container(); baa.setLabel('baa')
+bab = Container(); bab.setLabel('bab')
+bb = Container(); bb.setLabel('bb')
+bba = Container(); bba.setLabel('bba')
+bbb = Container(); bbb.setLabel('bbb')
+
+root.append(a)
+root.append(b)
+a.append(aa)
+a.append(ab)
+b.append(ba)
+b.append(bb)
+aa.append(aaa)
+aa.append(aab)
+ab.append(aba)
+ab.append(abb)
+ba.append(baa)
+ba.append(bab)
+bb.append(bba)
+bb.append(bbb)
+
+print('a.children():')
+for i in a.children():
+    print(i.label())
+
+print('a.subtree():')
+for i in a.subtree():
+    print(i.label())
+
+print('a.descendants():')
+for i in a.descendants():
+    print(i.label())
+
+print('a as iterable:')
+for i in a:
+    print(i.label())
+
+print('Angle structure iteration:')
+for a in AngleStructures(Example3.figureEight()):
+    print(a)
+
+print('Normal surface iteration:')
+surfaces = NormalSurfaces(Example3.figureEight(), NormalCoords.Quad)
+for s in surfaces:
+    print(s)
+
+for s in surfaces.vectors():
+    print(s)
+
+print('Normal disc iteration:')
+for d in DiscSetSurface(NormalSurfaces(Example3.poincare(), NormalCoords.Standard).surface(0)):
+    print(d)
+
+print('Normal hypersurface iteration:')
+hypersurfaces = NormalHypersurfaces(Example4.rp4(), HyperCoords.Standard)
+for s in hypersurfaces:
+    print(s)
+
+for s in hypersurfaces.vectors():
+    print(s)
+
+print('Model link graph cell arc iteration:')
+g = ModelLinkGraph.fromPlantri('bcdd,aeec,abfd,acfa,bffb,ceed')
+c = g.cells()
+for i in range(c.countCells()):
+	bdry = []
+	for a in c.arcs(i):
+		bdry.append(str(a.node().index()) + ':' + str(a.arc()))
+	print(bdry)
+
+print('Vector<Integer> iteration:')
+for i in VectorInt([3,5,-1]):
+	print(i)
+
+print('Vector<LargeInteger> iteration:')
+for i in VectorLarge([3,5,-1]):
+	print(i)
+
+print('PermGroup iteration:')
+for i in PermGroup4(NamedPermGroup.Alternating):
+	print(i)
+
+print('TableView iteration:')
+for i in quadString:
+	print(i)

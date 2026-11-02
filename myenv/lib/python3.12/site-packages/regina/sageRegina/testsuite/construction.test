@@ -1,0 +1,63 @@
+# Regina - A Normal Surface Theory Calculator
+# Python Test Suite Component
+#
+# Copyright (c) 2015-2025, Ben Burton
+# For further details contact Ben Burton (bab@debian.org).
+#
+# Tests the behaviour of the various dumpConstruction() functions.
+#
+# This file is a single component of Regina's python test suite.  To run
+# the python test suite, move to the main python directory in the source
+# tree and run "make check".
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# As an exception, when this program is distributed through (i) the
+# App Store by Apple Inc.; (ii) the Mac App Store by Apple Inc.; or
+# (iii) Google Play by Google Inc., then that store may impose any
+# digital rights management, device limits and/or redistribution
+# restrictions that are required by its terms of service.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+def testDump(obj):
+	print('----------')
+	print(obj)
+	print()
+	
+	# For C++, just print the construction.
+	print(obj.source(Language.Cxx))
+	
+	# For Python, print it _and_ test that it works.
+	code = obj.source()
+	print(code)
+	# As of Python 3.13 we need to set up our own locals dictionary (a result
+	# of PEP 667).  See also: https://github.com/python/cpython/issues/118888
+	loc = {}
+	exec(code, globals(), loc)
+	if obj.__class__ == regina.Link:
+		print(loc['link'])
+	else:
+		print(loc['tri'])
+
+testDump(Link())
+testDump(Link(1))
+testDump(Link(2))
+testDump(ExampleLink.trefoil())
+testDump(ExampleLink.hopf())
+
+testDump(Triangulation3())
+testDump(Example2.annulus())
+testDump(Example3.ball())
+testDump(Example3.poincare())
+testDump(Example4.cappellShaneson())
+testDump(Example8.sphere())

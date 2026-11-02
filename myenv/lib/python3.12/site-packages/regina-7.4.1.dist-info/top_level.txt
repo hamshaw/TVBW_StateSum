@@ -1,0 +1,4 @@
+regina
+regina/pyCensus
+regina/sageRegina
+regina/sageRegina/testsuite

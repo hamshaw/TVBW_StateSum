@@ -1,0 +1,62 @@
+Script variables #1
+Step 1
+Step 2
+Step 3
+Step 4
+Step 5
+Step 6
+Step 7
+Step 8
+Destroying: a1
+Step 9
+Bounded orientable 3-D triangulation, f = ( 4 6 4 1 )
+b1
+None
+Empty script, foo = <b1>
+c1
+None
+Script variables #2
+Step 1
+Step 2
+Step 3
+Destroying: c1
+Step 4
+Step 5
+Step 6
+Step 7
+Destroying: b1
+Step 8
+Step 9
+Destroying: a2
+Step 10
+Bounded orientable 3-D triangulation, f = ( 4 6 4 1 )
+b2
+None
+Empty script, foo = (null)
+c2
+None
+Example triangulation
+Step 1
+Step 2
+Destroying: f
+Step 3
+Vertex link #1
+Step 1
+Step 2
+Step 3
+Destroying: t1
+Step 4
+qvLLMvvMQegfhlnpopaabcbcaeb
+Vertex link #2
+Step 1
+Step 2
+Step 3
+Destroying: t2
+Step 4
+Step 5
+Bounded orientable 3-D triangulation, f = ( 4 6 4 1 )
+b2
+None
+Empty script, foo = (null)
+c2
+None

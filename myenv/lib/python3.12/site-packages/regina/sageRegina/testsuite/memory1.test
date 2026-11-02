@@ -1,0 +1,152 @@
+# Regina - A Normal Surface Theory Calculator
+# Python Test Suite Component
+#
+# Copyright (c) 2015-2025, Ben Burton
+# For further details contact Ben Burton (bab@debian.org).
+#
+# Tests the lifetime management of packets.
+#
+# This file is a single component of Regina's python test suite.  To run
+# the python test suite, move to the main python directory in the source
+# tree and run "make check".
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# As an exception, when this program is distributed through (i) the
+# App Store by Apple Inc.; (ii) the Mac App Store by Apple Inc.; or
+# (iii) Google Play by Google Inc., then that store may impose any
+# digital rights management, device limits and/or redistribution
+# restrictions that are required by its terms of service.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+# Fetch the python/testsuite path in the source tree, since we will need
+# to access external files.
+import sys
+if (len(sys.argv) > 1):
+	testpath = sys.argv[1]
+else:
+	testpath = '.'
+
+class Watcher(PacketListener):
+    def __init__(self, packet):
+        PacketListener.__init__(self)
+        packet.listen(self)
+    def packetBeingDestroyed(self, packet):
+        print('Destroying: ' + packet.label())
+
+
+print('Insertion case')
+print('Step 1')
+c = Container(); cw = Watcher(c); c.setLabel('c')
+print('Step 2')
+t = PacketOfTriangulation3(); t.newTetrahedron(); tw = Watcher(t); t.setLabel('t')
+print('Step 3')
+c.append(t)
+print('Step 4')
+t = None
+print('Step 5')
+c = None # Should destroy both c and t
+print('Step 6')
+
+print('Root destruction case')
+print('Step 1')
+a = Container(); aw = Watcher(a); a.setLabel('a')
+print('Step 2')
+b = PacketOfTriangulation3(); bw = Watcher(b); b.setLabel('b')
+print('Step 3')
+a.append(b)
+print('Step 4')
+a = None # Should destroy a only, since we are holding a reference to b
+print('Step 5')
+# b remains alive but orphaned
+print(b.label())
+print(b.parent())
+
+print('Orphan case')
+print('Step 1')
+p = Container(); pw = Watcher(p); p.setLabel('p')
+print('Step 2')
+q = PacketOfTriangulation3(); qw = Watcher(q); q.setLabel('q')
+print('Step 3')
+p.append(q)
+print('Step 4')
+q.makeOrphan()
+print('Step 5')
+p = None # Should destroy p
+print('Step 6')
+q = None # Should destroy q
+print('Step 7')
+
+# An example of makeOrphan where we never held the reference to the
+# child in the first place.
+print('Multiple orphan case')
+print('Step 1')
+x = regina.open(testpath + '/file1.rga'); xw = Watcher(x); x.setLabel('x')
+print('Step 2')
+y = x.lastChild(); yw = Watcher(y); y.setLabel('y')
+print('Step 3')
+y.makeOrphan()
+print('Step 4')
+x = None # Should destroy x
+print('Step 5')
+y = None # Should destroy y
+print('Step 6')
+
+# An example like above, but where we hold many references to the same
+# child packet.
+print('Many references case')
+print('Step 1')
+f = regina.open(testpath + '/file2.rga'); fw = Watcher(f); f.setLabel('f')
+print('Step 2')
+g = f.lastChild(); gw = Watcher(g); g.setLabel('g')
+print('Step 3')
+h = f.lastChild(); hw = Watcher(h) # h is the same packet as g
+print('Step 4')
+g.makeOrphan()
+print('Step 5')
+f = None # Should destroy f
+print('Step 6')
+g = None
+print('Step 7')
+h = None # Should destroy g (and there are two watchers now)
+print('Step 8')
+
+# b should still be alive at this point.
+print(b)
+print(b.label())
+
+# Destroy b's watcher now, so it does not try to call print() as the
+# entire python system is shutting down
+bw = None
+
+# An example where we drop the root of a tree but hang on to references
+# deeper within the tree.
+print('Deep reference case')
+x = Container(); x.setLabel('x'); xw = Watcher(x);
+y = Container(); y.setLabel('y'); yw = Watcher(y);
+z1 = Container(); z1.setLabel('z1'); z1w = Watcher(z1);
+z2 = Container(); z2.setLabel('z2'); z2w = Watcher(z2);
+print('Step 1')
+x.append(z1)
+x.append(z2)
+z1.append(y)
+print('Step 2')
+z2 = None
+print('Step 3')
+x = None # Should delete x and z2, with the child z2 going first
+print('Step 4')
+z1 = None # Should delete z1
+print('Step 5')
+y = None # Should delete y
+print('Step 6')
+

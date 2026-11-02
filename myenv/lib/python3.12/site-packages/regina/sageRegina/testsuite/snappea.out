@@ -1,0 +1,90 @@
+2 Z
+Z + Z_5
+2 Z
+True
+
+2 Z
+Z + Z_5
+2 Z
+True
+
+2 Z
+To be changed:
+    Size: 4
+    Homology: 2 Z
+Was changed:
+    Size: 4
+    Homology: Z + Z_5
+Z + Z_5
+To be changed:
+    Size: 4
+    Homology: Z + Z_5
+Was changed:
+    Size: 4
+    Homology: 2 Z
+2 Z
+To be changed:
+    Size: 5
+    Homology: 2 Z
+Was changed:
+    Null
+True
+
+Ideal orientable 3-D triangulation, f = ( 2 4 8 4 ), cusps: [ vertex 1: (-3, 7), vertex 0 ]
+
+Size of the skeleton:
+  Tetrahedra: 4
+  Triangles: 8
+  Edges: 4
+  Vertices: 2
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              1 (320)     3 (230)     3 (231)     1 (120)
+    1  |              0 (312)     2 (213)     0 (210)     2 (023)
+    2  |              3 (130)     3 (012)     1 (123)     1 (103)
+    3  |              2 (013)     2 (201)     0 (301)     0 (302)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   1   1   1
+    1  |             1   1   1   0
+    2  |             1   1   1   0
+    3  |             1   1   0   1
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   0   1   2   3   2
+    1  |           3   2   0   2   1   0
+    2  |           2   2   1   3   1   0
+    3  |           2   1   3   1   2   0
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           3   4   0   5
+    2  |           6   7   5   4
+    3  |           7   6   1   2
+
+Tetrahedron shapes:
+  0: ( 0.960267, 1.2835 )
+  1: ( -0.0397327, 1.2835 )
+  2: ( 0.381077, 0.47042 )
+  3: ( 0.626279, 0.499517 )
+
+Cusps:
+  0: Vertex 1, filled (-3, 7)
+  1: Vertex 0, complete
+
+Ideal orientable 3-D triangulation, f = ( 2 4 8 4 )
+Ideal orientable 3-D triangulation, f = ( 2 4 8 4 )
+Ideal orientable 3-D triangulation, f = ( 2 4 8 4 ), cusps: [ vertex 0, vertex 1 ]
+Ideal orientable 3-D triangulation, f = ( 2 4 8 4 ), cusps: [ vertex 0, vertex 1 ]
+Closed orientable 3-D triangulation, f = ( 1 6 10 5 )
+Closed orientable 3-D triangulation, f = ( 1 6 10 5 )
+Ideal orientable 3-D triangulation, f = ( 1 2 4 2 ), cusps: [ vertex 0: (1, 0) ]
+Ideal orientable 3-D triangulation, f = ( 1 2 4 2 ), cusps: [ vertex 0: (1, 0) ]

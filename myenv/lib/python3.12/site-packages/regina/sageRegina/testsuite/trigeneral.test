@@ -1,0 +1,153 @@
+# Regina - A Normal Surface Theory Calculator
+# Python Test Suite Component
+#
+# Copyright (c) 2007-2025, Ben Burton
+# For further details contact Ben Burton (bab@debian.org).
+#
+# Provides more thorough tests for different types of triangulation.
+#
+# This file is a single component of Regina's python test suite.  To run
+# the python test suite, move to the main python directory in the source
+# tree and run "make check".
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# As an exception, when this program is distributed through (i) the
+# App Store by Apple Inc.; (ii) the Mac App Store by Apple Inc.; or
+# (iii) Google Play by Google Inc., then that store may impose any
+# digital rights management, device limits and/or redistribution
+# restrictions that are required by its terms of service.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+import hashlib
+
+def checksum(str):
+	h = hashlib.md5()
+	h.update(str.encode('utf-8'))
+	return h.hexdigest()
+
+def vitalStats(tri, name):
+	# To guard against accidental changes.
+	old = tri.detail()
+	
+	print("-------------------------------")
+	print(name)
+	print("-------------------------------")
+	print()
+	print(tri.detail())
+	print(tri.countComponents(), "components")
+	print(tri.countBoundaryComponents(), "boundary components")
+	print(tri.countTetrahedra(), "tetrahedra")
+	print(tri.countTriangles(), "triangles")
+	print(tri.countEdges(), "edges")
+	print(tri.countVertices(), "vertices")
+	print("2-sphere boundaries:", tri.hasTwoSphereBoundaryComponents())
+	print("Negative ideal boundaries:", tri.hasNegativeIdealBoundaryComponents())
+	print("EC:", tri.eulerCharTri())
+	print("Valid:", tri.isValid())
+	print("Ideal:", tri.isIdeal())
+	print("Standard:", tri.isStandard())
+	print("Boundary Triangles:", tri.hasBoundaryTriangles())
+	print("Closed:", tri.isClosed())
+	print("Orientable:", tri.isOrientable())
+	print("Connected:", tri.isConnected())
+	print()
+	print("Fundamental group:", tri.fundamentalGroup().recogniseGroup())
+	# Don't print the full generators and relations for now, since this
+	# is not unique and can therefore lead to spurious test failures.
+	# print tri.fundamentalGroup().detail()
+	print("H1:", tri.homology())
+	if tri.isValid():
+		print("H1Bdry:", tri.homologyBdry())
+		print("H1Rel:", tri.homologyRel())
+		print("H2:", tri.homology(2))
+		print("H2Z2:", tri.homologyH2Z2(), "Z_2")
+	if tri.isValid() and tri.isClosed() and tri.countTetrahedra() > 0:
+		print("TV(5, 3) =", tri.turaevViro(5, 3))
+		
+		tv = tri.turaevViroApprox(5, 3)
+		
+		# We round the figures to 5 decimal places so that machines with
+		# different precisions do not give different output.
+		
+		# The case of 0 must also be handled specially, since rounding
+		# may give either 0 or -0.
+		
+		if tv < 0.00001 and tv > -0.00001:
+			tv = 0
+		print("TV(5, 3) ~ %.5f" % tv)
+	
+	# Normal surface computations should only be run on sufficiently
+	# small triangulations, so as to keep the tests relatively fast.
+	if tri.countTetrahedra() < 7:
+		print("0-efficient:", tri.isZeroEfficient())
+		if tri.isConnected():
+			print("Splitting surface:", tri.hasSplittingSurface())
+	
+	# Though this can use normal surfaces, its prechecks and
+	# optimisations should make it fast enough for our examples.
+	print("3-sphere:", tri.isSphere())
+	
+	# Some of the following operations can create large triangulations,
+	# which give *lots* of output when we try to dump their face gluings
+	# and skeletal details.  We'd like to keep the output files small,
+	# so dump checksums of the details instead of the details themselves.
+	print("Double cover:")
+	t = regina.Triangulation3(tri)
+	t.makeDoubleCover()
+	print("Checksum =", checksum(t.detail()))
+	
+	print("Ideal to finite:")
+	t = regina.Triangulation3(tri)
+	print("Result =", t.truncateIdeal())
+	print("Checksum =", checksum(t.detail()))
+	
+	print("Finite to ideal:")
+	t = regina.Triangulation3(tri)
+	print("Result =", t.makeIdeal())
+	print("Checksum =", checksum(t.detail()))
+	
+	print("Barycentric subdivision:")
+	t = regina.Triangulation3(tri)
+	t.subdivide()
+	print("Checksum =", checksum(t.detail()))
+	
+	try:
+		print("Dehydration:", tri.dehydrate())
+	except NotImplemented:
+		print("Dehydration: (none)")
+	print("Isomorphism signature:", tri.isoSig())
+	print("Result of splitIntoComponents:", len(tri.triangulateComponents()))
+	
+	if tri.detail() != old:
+		print("ERROR: Original triangulation has changed!")
+	
+	print()
+
+t = regina.Triangulation3()
+vitalStats(t, 'Empty triangulation')
+
+vitalStats(regina.Example3.threeSphere(), '3-sphere')
+vitalStats(regina.Example3.s2xs1(), 'S2 x S1')
+vitalStats(regina.Example3.rp2xs1(), 'RP2 x S1')
+vitalStats(regina.Example3.rp3rp3(), 'RP3 # RP3')
+vitalStats(regina.Example3.lens(8,3), 'L(8,3)')
+vitalStats(regina.Example3.poincare(), 'Poincare homology sphere')
+vitalStats(regina.Example3.smallClosedOrblHyperbolic(), 'Closed orientable hyperbolic 3-manifold')
+vitalStats(regina.Example3.smallClosedNonOrblHyperbolic(), 'Closed non-orientable hyperbolic 3-manifold')
+vitalStats(regina.Example3.lst(3,4), 'LST(3,4,7)')
+vitalStats(regina.Example3.solidKleinBottle(), 'Solid Klein bottle')
+vitalStats(regina.Example3.figureEight(), 'Figure eight knot complement')
+vitalStats(regina.Example3.whiteheadLink(), 'Whitehead link complement')
+vitalStats(regina.Example3.gieseking(), 'Gieseking manifold')
+vitalStats(regina.Example3.cuspedGenusTwoTorus(), 'Cusped genus two solid torus')

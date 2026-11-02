@@ -1,0 +1,1251 @@
+-------------------------------
+Empty triangulation
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 0
+  Triangles: 0
+  Edges: 0
+  Vertices: 0
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+
+
+0 components
+0 boundary components
+0 tetrahedra
+0 triangles
+0 edges
+0 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: True
+Connected: True
+
+Fundamental group: 0
+H1: 0
+H1Bdry: 0
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+0-efficient: True
+Splitting surface: False
+3-sphere: False
+Double cover:
+Checksum = 2974e9b80d10206c5a4aed43a337cf6f
+Ideal to finite:
+Result = False
+Checksum = 2974e9b80d10206c5a4aed43a337cf6f
+Finite to ideal:
+Result = False
+Checksum = 2974e9b80d10206c5a4aed43a337cf6f
+Barycentric subdivision:
+Checksum = 2974e9b80d10206c5a4aed43a337cf6f
+Dehydration: aaa
+Isomorphism signature: a
+Result of splitIntoComponents: 0
+
+-------------------------------
+3-sphere
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 1
+  Triangles: 2
+  Edges: 2
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              0 (013)     0 (012)     0 (312)     0 (230)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   1   1   1   1
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   0   1   1
+
+
+1 components
+0 boundary components
+1 tetrahedra
+2 triangles
+2 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: True
+Connected: True
+
+Fundamental group: 0
+H1: 0
+H1Bdry: 0
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+TV(5, 3) = 1/10 x^3 - 1/10 x^2 + 1/5
+TV(5, 3) ~ 0.36180
+0-efficient: True
+Splitting surface: False
+3-sphere: True
+Double cover:
+Checksum = 63365e80033991ac02273c19bcb3a07e
+Ideal to finite:
+Result = False
+Checksum = e0895d467eeff4486d42c6f5550ef275
+Finite to ideal:
+Result = False
+Checksum = e0895d467eeff4486d42c6f5550ef275
+Barycentric subdivision:
+Checksum = 9c7b26b3ac89caba8e0b596e704008ba
+Dehydration: baaaafr
+Isomorphism signature: bkaagj
+Result of splitIntoComponents: 1
+
+-------------------------------
+S2 x S1
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 2
+  Triangles: 4
+  Edges: 3
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              0 (123)     1 (013)     1 (023)     0 (012)
+    1  |              1 (123)     0 (013)     0 (023)     1 (012)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   0   1   0
+    1  |           0   1   2   0   1   0
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   0
+    1  |           3   1   2   3
+
+
+1 components
+0 boundary components
+2 tetrahedra
+4 triangles
+3 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: True
+Connected: True
+
+Fundamental group: Z
+H1: Z
+H1Bdry: 0
+H1Rel: Z
+H2: Z
+H2Z2: 1 Z_2
+TV(5, 3) = 1
+TV(5, 3) ~ 1.00000
+0-efficient: False
+Splitting surface: True
+3-sphere: False
+Double cover:
+Checksum = 35fedbfc9c0b29e54d54cb9e90070ecb
+Ideal to finite:
+Result = False
+Checksum = e84d2aa18433ae80744731174a122dce
+Finite to ideal:
+Result = False
+Checksum = e84d2aa18433ae80744731174a122dce
+Barycentric subdivision:
+Checksum = e1a3aaba6585e67dc2803c207c6bec6b
+Dehydration: cacabboxo
+Isomorphism signature: cMcabbjaj
+Result of splitIntoComponents: 1
+
+-------------------------------
+RP2 x S1
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 3
+  Triangles: 6
+  Edges: 4
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              2 (230)     1 (120)     2 (201)     1 (123)
+    1  |              0 (301)     2 (013)     2 (312)     0 (123)
+    2  |              0 (230)     1 (013)     0 (201)     1 (230)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+    2  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   0   3   2
+    1  |           2   3   0   0   3   2
+    2  |           2   1   0   2   3   0
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           1   4   5   3
+    2  |           2   4   0   5
+
+
+1 components
+0 boundary components
+3 tetrahedra
+6 triangles
+4 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: False
+Connected: True
+
+Fundamental group: Z + Z_2
+H1: Z + Z_2
+H1Bdry: 0
+H1Rel: Z + Z_2
+H2: Z_2
+H2Z2: 2 Z_2
+TV(5, 3) = 1
+TV(5, 3) ~ 1.00000
+0-efficient: True
+Splitting surface: True
+3-sphere: False
+Double cover:
+Checksum = 0d5696dbc18f4d016dee97b0a4b4d340
+Ideal to finite:
+Result = False
+Checksum = bf1d2d8bcddd9cb1d5ecd87283096351
+Finite to ideal:
+Result = False
+Checksum = bf1d2d8bcddd9cb1d5ecd87283096351
+Barycentric subdivision:
+Checksum = 4147fcb17adbe52601bfd960d53dfb61
+Dehydration: dadbcccfxfh
+Isomorphism signature: dLQbcccajqs
+Result of splitIntoComponents: 1
+
+-------------------------------
+RP3 # RP3
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 4
+  Triangles: 8
+  Edges: 5
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              0 (231)     1 (230)     3 (123)     0 (201)
+    1  |              1 (013)     1 (012)     0 (301)     2 (023)
+    2  |              2 (231)     3 (230)     1 (123)     2 (201)
+    3  |              3 (013)     3 (012)     2 (301)     0 (023)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+    2  |             0   0   0   0
+    3  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   1   1   1   0
+    1  |           2   1   1   3   3   0
+    2  |           0   3   3   3   3   0
+    3  |           4   3   3   1   1   0
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   0
+    1  |           3   3   1   4
+    2  |           5   6   4   5
+    3  |           7   7   6   2
+
+
+1 components
+0 boundary components
+4 tetrahedra
+8 triangles
+5 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: True
+Connected: True
+
+Fundamental group: FreeProduct( Z_2, Z_2 )
+H1: 2 Z_2
+H1Bdry: 0
+H1Rel: 2 Z_2
+H2: 0
+H2Z2: 2 Z_2
+TV(5, 3) = 0
+TV(5, 3) ~ 0.00000
+0-efficient: False
+Splitting surface: True
+3-sphere: False
+Double cover:
+Checksum = 1c070beb6952f59506fb6d8fb5614a6f
+Ideal to finite:
+Result = False
+Checksum = f0b215d3c72f9918041b1c11e18c16f5
+Finite to ideal:
+Result = False
+Checksum = f0b215d3c72f9918041b1c11e18c16f5
+Barycentric subdivision:
+Checksum = 142287d3a70550484d047b5be533e7cc
+Dehydration: eaoabcddgrwxg
+Isomorphism signature: eLMkabcddbrrag
+Result of splitIntoComponents: 1
+
+-------------------------------
+L(8,3)
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 2
+  Triangles: 4
+  Edges: 3
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              0 (130)     0 (201)     1 (012)     1 (130)
+    1  |              0 (023)     0 (312)     1 (312)     1 (230)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   0   1   1   0   2
+    1  |           0   1   2   2   1   2
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   0   1   2
+    1  |           1   2   3   3
+
+
+1 components
+0 boundary components
+2 tetrahedra
+4 triangles
+3 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: True
+Connected: True
+
+Fundamental group: Z_8
+H1: Z_8
+H1Bdry: 0
+H1Rel: Z_8
+H2: 0
+H2Z2: 1 Z_2
+TV(5, 3) = -1/5 x^3 + 1/5 x^2 + 3/5
+TV(5, 3) ~ 0.27639
+0-efficient: True
+Splitting surface: True
+3-sphere: False
+Double cover:
+Checksum = 1625eb20b4737ace8f054d27df2536d8
+Ideal to finite:
+Result = False
+Checksum = bc3c9d0badad425123022caf9180cf24
+Finite to ideal:
+Result = False
+Checksum = bc3c9d0badad425123022caf9180cf24
+Barycentric subdivision:
+Checksum = 87f804cb9134f43646685d2211b9abbd
+Dehydration: cabbabakn
+Isomorphism signature: cMcabbjqs
+Result of splitIntoComponents: 1
+
+-------------------------------
+Poincare homology sphere
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 5
+  Triangles: 10
+  Edges: 6
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              4 (312)     3 (321)     2 (312)     1 (321)
+    1  |              3 (203)     4 (230)     2 (203)     0 (321)
+    2  |              4 (301)     3 (120)     1 (203)     0 (230)
+    3  |              2 (301)     4 (120)     1 (102)     0 (310)
+    4  |              3 (301)     2 (120)     1 (301)     0 (120)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+    2  |             0   0   0   0
+    3  |             0   0   0   0
+    4  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   3   4   5
+    1  |           1   0   2   5   4   3
+    2  |           4   0   3   5   1   2
+    3  |           3   1   5   4   2   0
+    4  |           5   2   4   3   0   1
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           4   5   6   3
+    2  |           7   8   6   2
+    3  |           8   9   4   1
+    4  |           9   7   5   0
+
+
+1 components
+0 boundary components
+5 tetrahedra
+10 triangles
+6 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: True
+Connected: True
+
+Fundamental group: 
+H1: 0
+H1Bdry: 0
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+TV(5, 3) = -2/5 x^3 + 2/5 x^2 + 7/10
+TV(5, 3) ~ 0.05279
+0-efficient: True
+Splitting surface: False
+3-sphere: False
+Double cover:
+Checksum = 7c9f92ab294b61f9f8c4e8455bf195ee
+Ideal to finite:
+Result = False
+Checksum = f2a1934eba2ec4da6cfdc63dde226f38
+Finite to ideal:
+Result = False
+Checksum = f2a1934eba2ec4da6cfdc63dde226f38
+Barycentric subdivision:
+Checksum = 1e024f019f91f264f885e9a7bdef2c70
+Dehydration: fapaadecedenbokbo
+Isomorphism signature: fvPQcdecedekrsnrs
+Result of splitIntoComponents: 1
+
+-------------------------------
+Closed orientable hyperbolic 3-manifold
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 9
+  Triangles: 18
+  Edges: 10
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              8 (021)     2 (023)     8 (320)     6 (132)
+    1  |              7 (231)     3 (321)     8 (123)     6 (120)
+    2  |              4 (312)     3 (012)     0 (013)     7 (031)
+    3  |              2 (013)     5 (213)     5 (301)     1 (310)
+    4  |              7 (320)     5 (012)     6 (032)     2 (120)
+    5  |              4 (013)     3 (230)     8 (013)     3 (103)
+    6  |              1 (312)     7 (012)     4 (032)     0 (132)
+    7  |              6 (013)     2 (132)     4 (210)     1 (201)
+    8  |              0 (021)     5 (023)     0 (320)     1 (023)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+    2  |             0   0   0   0
+    3  |             0   0   0   0
+    4  |             0   0   0   0
+    5  |             0   0   0   0
+    6  |             0   0   0   0
+    7  |             0   0   0   0
+    8  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   3   4   0
+    1  |           5   3   6   4   7   1
+    2  |           8   0   2   9   7   4
+    3  |           8   2   6   7   6   5
+    4  |           5   9   1   9   8   0
+    5  |           5   1   2   8   6   6
+    6  |           7   1   9   4   3   0
+    7  |           7   9   9   3   4   5
+    8  |           1   0   2   3   6   1
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           4   5   6   7
+    2  |           8   9   1  10
+    3  |           9  11  12   5
+    4  |          13  14  15   8
+    5  |          14  12  16  11
+    6  |           7  17  15   3
+    7  |          17  10  13   4
+    8  |           0  16   2   6
+
+
+1 components
+0 boundary components
+9 tetrahedra
+18 triangles
+10 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: True
+Connected: True
+
+Fundamental group: 
+H1: 2 Z_5
+H1Bdry: 0
+H1Rel: 2 Z_5
+H2: 0
+H2Z2: 0 Z_2
+TV(5, 3) = 1/2
+TV(5, 3) ~ 0.50000
+3-sphere: False
+Double cover:
+Checksum = 6b130ff2c923a3ec3aad2ffb82a1ba5e
+Ideal to finite:
+Result = False
+Checksum = 0d952e074561b67d459f59970dcaac2c
+Finite to ideal:
+Result = False
+Checksum = 0d952e074561b67d459f59970dcaac2c
+Barycentric subdivision:
+Checksum = 229918cd462d14374b09133a34aba210
+Dehydration: jphaeaacfgehggiiialhaggjbvw
+Isomorphism signature: jLvAzQQcfeghighiiuquanobwwr
+Result of splitIntoComponents: 1
+
+-------------------------------
+Closed non-orientable hyperbolic 3-manifold
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 11
+  Triangles: 22
+  Edges: 12
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              2 (310)     8 (213)     2 (021)     8 (320)
+    1  |              9 (103)     2 (213)     3 (302)     5 (012)
+    2  |              0 (032)     0 (210)     4 (320)     1 (103)
+    3  |              6 (032)     4 (201)     1 (230)     6 (130)
+    4  |              3 (130)    10 (320)     2 (320)    10 (103)
+    5  |              1 (123)     6 (012)     7 (132)     7 (120)
+    6  |              5 (013)     3 (312)     3 (021)     8 (103)
+    7  |              5 (312)     8 (012)     9 (021)     5 (032)
+    8  |              7 (013)     6 (213)     0 (321)     0 (103)
+    9  |              7 (032)     1 (102)    10 (213)    10 (120)
+   10  |              9 (312)     4 (213)     4 (310)     9 (203)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+    2  |             0   0   0   0
+    3  |             0   0   0   0
+    4  |             0   0   0   0
+    5  |             0   0   0   0
+    6  |             0   0   0   0
+    7  |             0   0   0   0
+    8  |             0   0   0   0
+    9  |             0   0   0   0
+   10  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   2   3   4
+    1  |           4   5   6   7   0   8
+    2  |           2   1   1   4   0   6
+    3  |           6   8   5   3   7   6
+    4  |           7   6   1   5   9   1
+    5  |           7   0   8   8  10  11
+    6  |           7   8   6  10   3   3
+    7  |          10  11   4   8   0  11
+    8  |          10   4   3   0   3   2
+    9  |           4  11   7  11   5   9
+   10  |           5   9   1  11   9   7
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           4   5   6   7
+    2  |           2   0   8   5
+    3  |           9  10   6  11
+    4  |          10  12   8  13
+    5  |           7  14  15  16
+    6  |          14  11   9  17
+    7  |          16  18  19  15
+    8  |          18  17   3   1
+    9  |          19   4  20  21
+   10  |          21  13  12  20
+
+
+1 components
+0 boundary components
+11 tetrahedra
+22 triangles
+12 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: False
+Closed: True
+Orientable: False
+Connected: True
+
+Fundamental group: 
+H1: Z
+H1Bdry: 0
+H1Rel: Z
+H2: Z_2
+H2Z2: 1 Z_2
+TV(5, 3) = x^3 - x^2 + 1
+TV(5, 3) ~ 2.61803
+3-sphere: False
+Double cover:
+Checksum = 03c9ffcca5f63716d35e47091940c079
+Ideal to finite:
+Result = False
+Checksum = f00404cc3ec1d8f8438e4f9d06e821e8
+Finite to ideal:
+Result = False
+Checksum = f00404cc3ec1d8f8438e4f9d06e821e8
+Barycentric subdivision:
+Checksum = 9a0bc2537afc27d932bc95d8070328f0
+Dehydration: lpdalaebciijhijjkkkknbxnxrhckje
+Isomorphism signature: lLLLALAQccegffiijkikkkknawmhvwcls
+Result of splitIntoComponents: 1
+
+-------------------------------
+LST(3,4,7)
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 3
+  Triangles: 7
+  Edges: 5
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |             boundary    boundary     1 (012)     1 (130)
+    1  |              0 (023)     0 (312)     2 (013)     2 (120)
+    2  |              1 (312)     1 (023)     2 (312)     2 (230)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+    2  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   2   1   3
+    1  |           1   2   3   3   2   4
+    2  |           2   4   3   3   4   3
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           2   3   4   5
+    2  |           5   4   6   6
+
+
+1 components
+1 boundary components
+3 tetrahedra
+7 triangles
+5 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: True
+Closed: False
+Orientable: True
+Connected: True
+
+Fundamental group: Z
+H1: Z
+H1Bdry: 2 Z
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+0-efficient: False
+Splitting surface: True
+3-sphere: False
+Double cover:
+Checksum = f42a37a14e032482ca909bcaae219d00
+Ideal to finite:
+Result = False
+Checksum = d733296a0190d44e08b3318c008379bb
+Finite to ideal:
+Result = True
+Checksum = c6e15ace05324726faaecd9fcfc3f4aa
+Barycentric subdivision:
+Checksum = 914c720a4b95c1751f900250361f16d3
+Dehydration: (none)
+Isomorphism signature: dHKcbcchqn
+Result of splitIntoComponents: 1
+
+-------------------------------
+Solid Klein bottle
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 2
+  Triangles: 6
+  Edges: 6
+  Vertices: 2
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              1 (132)    boundary    boundary     1 (012)
+    1  |              0 (123)    boundary    boundary     0 (021)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   1   0   0
+    1  |             1   0   0   1
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   3   4   1
+    1  |           3   4   5   1   0   3
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           3   4   5   0
+
+
+1 components
+1 boundary components
+2 tetrahedra
+6 triangles
+6 edges
+2 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 0
+Valid: True
+Ideal: False
+Standard: True
+Boundary Triangles: True
+Closed: False
+Orientable: False
+Connected: True
+
+Fundamental group: Z
+H1: Z
+H1Bdry: Z + Z_2
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+0-efficient: False
+Splitting surface: True
+3-sphere: False
+Double cover:
+Checksum = 00cf2f41d03890ce3e7ed11e8338eef3
+Ideal to finite:
+Result = False
+Checksum = d67633e4cb45d5972641b6b4900d2cf5
+Finite to ideal:
+Result = True
+Checksum = b9902656cfc4702a22f2fc546dee8b2d
+Barycentric subdivision:
+Checksum = 02583791529b72d885a8dab4a4a5c74d
+Dehydration: (none)
+Isomorphism signature: cHabj
+Result of splitIntoComponents: 1
+
+-------------------------------
+Figure eight knot complement
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 2
+  Triangles: 4
+  Edges: 2
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              1 (210)     1 (031)     1 (231)     1 (302)
+    1  |              0 (210)     0 (031)     0 (231)     0 (302)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   0   0   1   1
+    1  |           0   1   0   0   1   1
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           0   1   3   2
+
+
+1 components
+1 boundary components
+2 tetrahedra
+4 triangles
+2 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 1
+Valid: True
+Ideal: True
+Standard: True
+Boundary Triangles: False
+Closed: False
+Orientable: True
+Connected: True
+
+Fundamental group: Z~Free(2) w/monodromy a ↦ b, b ↦ b^2 a^-1 b
+H1: Z
+H1Bdry: 2 Z
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+0-efficient: True
+Splitting surface: False
+3-sphere: False
+Double cover:
+Checksum = ee83e7daaafa20367626a606e3ce036b
+Ideal to finite:
+Result = True
+Checksum = c69c61cffe9023024a9872b9cb75c061
+Finite to ideal:
+Result = False
+Checksum = 302d8bdb556787d1bf4ad542b1cd11c6
+Barycentric subdivision:
+Checksum = a81bbe91c84a8bfa227af889d05a8c0d
+Dehydration: cabbbbaei
+Isomorphism signature: cPcbbbiht
+Result of splitIntoComponents: 1
+
+-------------------------------
+Whitehead link complement
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 4
+  Triangles: 8
+  Edges: 4
+  Vertices: 2
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              3 (320)     1 (012)     2 (301)     3 (310)
+    1  |              0 (013)     2 (321)     2 (210)     3 (201)
+    2  |              1 (320)     0 (230)     3 (123)     1 (310)
+    3  |              1 (231)     0 (321)     0 (210)     2 (023)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   1   1
+    1  |             0   0   1   1
+    2  |             1   1   0   0
+    3  |             1   1   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   1   1   3
+    1  |           0   2   2   1   2   3
+    2  |           3   2   1   2   2   0
+    3  |           3   1   1   2   1   0
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           1   4   5   6
+    2  |           5   2   7   4
+    3  |           6   3   0   7
+
+
+1 components
+2 boundary components
+4 tetrahedra
+8 triangles
+4 edges
+2 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 2
+Valid: True
+Ideal: True
+Standard: True
+Boundary Triangles: False
+Closed: False
+Orientable: True
+Connected: True
+
+Fundamental group: 
+H1: 2 Z
+H1Bdry: 4 Z
+H1Rel: Z
+H2: Z
+H2Z2: 1 Z_2
+0-efficient: True
+Splitting surface: True
+3-sphere: False
+Double cover:
+Checksum = 72eae5009ca6c703883307f2453878c0
+Ideal to finite:
+Result = True
+Checksum = 15e698858fb8d28a0efd024325d7ded3
+Finite to ideal:
+Result = False
+Checksum = 4d514ae9d436658e536e065122fd1cfb
+Barycentric subdivision:
+Checksum = 39d18acfea5c2490ee7d2bc95fbab52b
+Dehydration: eahbdcddqwwwr
+Isomorphism signature: eLPkbdcddhgggb
+Result of splitIntoComponents: 1
+
+-------------------------------
+Gieseking manifold
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 1
+  Triangles: 2
+  Edges: 1
+  Vertices: 1
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              0 (031)     0 (021)     0 (213)     0 (203)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   0   0   0   0   0
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   0   1   1
+
+
+1 components
+1 boundary components
+1 tetrahedra
+2 triangles
+1 edges
+1 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: False
+EC: 1
+Valid: True
+Ideal: True
+Standard: True
+Boundary Triangles: False
+Closed: False
+Orientable: False
+Connected: True
+
+Fundamental group: Z~Free(2) w/monodromy a ↦ b, b ↦ b^-1 a
+H1: Z
+H1Bdry: Z + Z_2
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+0-efficient: True
+Splitting surface: False
+3-sphere: False
+Double cover:
+Checksum = 111003725ba8ebc3aee8468a2ec99cb7
+Ideal to finite:
+Result = True
+Checksum = 53220758c395f691fd0f104ef17e99e4
+Finite to ideal:
+Result = False
+Checksum = b2d800088a6cd65a37bd3df19005c357
+Barycentric subdivision:
+Checksum = 15010a058da3973ff4d6797648249e45
+Dehydration: baaaatl
+Isomorphism signature: bkaaid
+Result of splitIntoComponents: 1
+
+-------------------------------
+Cusped genus two solid torus
+-------------------------------
+
+Size of the skeleton:
+  Tetrahedra: 10
+  Triangles: 20
+  Edges: 10
+  Vertices: 2
+
+Tetrahedron gluing:
+  Tet  |  gluing:       (012)       (013)       (023)       (123)
+  -----+---------------------------------------------------------
+    0  |              4 (012)     3 (012)     2 (130)     1 (023)
+    1  |              2 (102)     5 (021)     0 (123)     6 (021)
+    2  |              1 (102)     0 (302)     3 (123)     7 (021)
+    3  |              0 (013)     8 (021)     9 (012)     2 (023)
+    4  |              0 (012)     8 (023)     7 (013)     7 (023)
+    5  |              1 (031)     6 (023)     9 (013)     6 (103)
+    6  |              1 (132)     5 (213)     5 (013)     8 (213)
+    7  |              2 (132)     4 (023)     4 (123)     9 (213)
+    8  |              3 (031)     9 (023)     4 (013)     6 (213)
+    9  |              3 (023)     5 (023)     8 (013)     7 (213)
+
+Vertices:
+  Tet  |  vertex:    0   1   2   3
+  -----+--------------------------
+    0  |             0   0   0   0
+    1  |             0   0   0   0
+    2  |             0   0   0   0
+    3  |             0   0   0   0
+    4  |             0   0   0   1
+    5  |             0   0   0   1
+    6  |             0   0   0   1
+    7  |             0   0   0   1
+    8  |             0   0   0   1
+    9  |             0   0   0   1
+
+Edges:
+  Tet  |  edge:   01  02  03  12  13  23
+  -----+--------------------------------
+    0  |           0   1   2   3   4   5
+    1  |           2   3   4   4   6   5
+    2  |           2   4   5   3   1   7
+    3  |           0   2   8   4   5   7
+    4  |           0   1   9   3   9   9
+    5  |           4   2   9   6   9   9
+    6  |           6   4   9   5   9   9
+    7  |           1   3   9   7   9   9
+    8  |           8   0   9   5   9   9
+    9  |           2   8   9   7   9   9
+
+Triangles:
+  Tet  |  face:  012 013 023 123
+  -----+------------------------
+    0  |           0   1   2   3
+    1  |           4   5   3   6
+    2  |           4   2   7   8
+    3  |           1   9  10   7
+    4  |           0  11  12  13
+    5  |           5  14  15  16
+    6  |           6  16  14  17
+    7  |           8  12  13  18
+    8  |           9  19  11  17
+    9  |          10  15  19  18
+
+
+1 components
+1 boundary components
+10 tetrahedra
+20 triangles
+10 edges
+2 vertices
+2-sphere boundaries: False
+Negative ideal boundaries: True
+EC: 2
+Valid: True
+Ideal: True
+Standard: False
+Boundary Triangles: False
+Closed: False
+Orientable: True
+Connected: True
+
+Fundamental group: Free(2)
+H1: 2 Z
+H1Bdry: 4 Z
+H1Rel: 0
+H2: 0
+H2Z2: 0 Z_2
+3-sphere: False
+Double cover:
+Checksum = 605a787c16b585c82e8619724ebdc4e9
+Ideal to finite:
+Result = True
+Checksum = 78931f8d40672fbf866009e14850ad33
+Finite to ideal:
+Result = False
+Checksum = 43816b49d407e4c45f82c15fb9939e84
+Barycentric subdivision:
+Checksum = e54bcdff3008318922d20b801d08bb79
+Dehydration: kdpahaacdhhjjggiijojuxxjvfojj
+Isomorphism signature: kLLvMMQkccghfihhjjjdwawwgggxxt
+Result of splitIntoComponents: 1
+

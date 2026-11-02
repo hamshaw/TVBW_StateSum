@@ -1,0 +1,89 @@
+# Regina - A Normal Surface Theory Calculator
+# Python Test Suite Component
+#
+# Copyright (c) 2007-2025, Ben Burton
+# For further details contact Ben Burton (bab@debian.org).
+#
+# Provides various tests for normal surface enumeration.
+#
+# This file is a single component of Regina's python test suite.  To run
+# the python test suite, move to the main python directory in the source
+# tree and run "make check".
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2 of the
+# License, or (at your option) any later version.
+#
+# As an exception, when this program is distributed through (i) the
+# App Store by Apple Inc.; (ii) the Mac App Store by Apple Inc.; or
+# (iii) Google Play by Google Inc., then that store may impose any
+# digital rights management, device limits and/or redistribution
+# restrictions that are required by its terms of service.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+def dumpSurfaces(name, tri, triName, coords = regina.HyperCoords.Standard, which = regina.HyperList.Default, alg = regina.HyperAlg.Default):
+	try:
+		slist = regina.NormalHypersurfaces(tri, coords, which)
+	except:
+		print("-------------------------------")
+		print(name)
+		print('ENUMERATION FAILED')
+		print("-------------------------------")
+		print()
+		return
+	
+	print("-------------------------------")
+	print(triName)
+	print(name)
+	print("-------------------------------")
+	print()
+	
+	# Dump the hypersurfaces in sort order, since we don't really mind if the
+	# ordering changes between releases.
+	surfaces = slist.detail().split('\n')
+	surfaces.sort()
+	# Let the text headers appear up top.
+	surfaces.reverse()
+	for s in surfaces:
+		print(s)
+	
+	# Nothing else to say.
+	print()
+
+def surfaceStats(tri, triName):
+	dumpSurfaces('Vertex hypersurfaces (std)',
+		tri, triName, regina.HyperCoords.Standard, regina.HyperList.Vertex)
+	dumpSurfaces('Vertex hypersurfaces (prism)',
+		tri, triName, regina.HyperCoords.Prism, regina.HyperList.Vertex)
+	dumpSurfaces('Fundamental surfaces (std, primal)',
+		tri, triName, regina.HyperCoords.Standard, regina.HyperList.Fundamental,
+		regina.HyperAlg.HilbertPrimal)
+	dumpSurfaces('Fundamental surfaces (std, dual)',
+		tri, triName, regina.HyperCoords.Standard, regina.HyperList.Fundamental,
+		regina.HyperAlg.HilbertDual)
+	dumpSurfaces('Fundamental surfaces (prism, primal)',
+		tri, triName, regina.HyperCoords.Prism, regina.HyperList.Fundamental,
+		regina.HyperAlg.HilbertPrimal)
+	dumpSurfaces('Fundamental surfaces (prism, dual)',
+		tri, triName, regina.HyperCoords.Prism, regina.HyperList.Fundamental,
+		regina.HyperAlg.HilbertDual)
+
+t = regina.Triangulation4()
+surfaceStats(t, 'Empty triangulation')
+
+surfaceStats(regina.Example4.fourSphere(), '4-sphere')
+# surfaceStats(regina.Example4.simplicialFourSphere(), 'Simplicial 4-sphere')
+surfaceStats(regina.Example4.rp4(), 'Real projective 4-space')
+surfaceStats(regina.Example4.s3xs1(), 'S3 x S1')
+surfaceStats(regina.Example4.s3xs1Twisted(), 'S3 x~ S1')
+surfaceStats(regina.Example4.cappellShaneson(), 'Cappell-Shaneson knot complement')
+# L(8,3) x S1:
+surfaceStats(regina.Triangulation4('kLLLzQMQQccefhihhgihijjijjKb9aGbKbebvbPadbaaebmb9aGasasamb'), 'L(8,3) x S1')

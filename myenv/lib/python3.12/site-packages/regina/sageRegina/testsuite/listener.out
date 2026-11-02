@@ -1,0 +1,43 @@
+Creating...
+Inserting children t,u...
+ADDING CHILD: c -> t
+ADDED CHILD: c -> t
+ADDING CHILD: c -> u
+ADDED CHILD: c -> u
+Renaming...
+RENAMING: t
+RENAMING CHILD: c -> t
+RENAMED: t2
+RENAMED CHILD: c -> t2
+Editing...
+CHANGING: text
+CHANGED: text2
+Orphaning child t...
+REMOVING CHILD: c -> t2
+REMOVED CHILD: c -> t2
+Reparenting child t...
+ADDING CHILD: c -> t2
+ADDED CHILD: c -> t2
+Dropping reference to u...
+Destroying child u...
+REMOVING CHILD: c -> u
+REMOVED CHILD: c -> u
+DESTROYING: u
+Destroying parent...
+DESTROYING: c
+Destroying child t...
+DESTROYING: t2
+Preparing order test...
+ADDING CHILD: x -> z1
+ADDED CHILD: x -> z1
+ADDING CHILD: x -> z2
+ADDED CHILD: x -> z2
+ADDING CHILD: z1 -> y
+ADDED CHILD: z1 -> y
+Dropping children...
+Dropping root...
+DESTROYING: y
+DESTROYING: z1
+DESTROYING: z2
+DESTROYING: x
+Finished.
