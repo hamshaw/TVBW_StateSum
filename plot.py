@@ -33,7 +33,7 @@ with open(filename, "r", encoding="utf-8") as file:
             # Parse and numerically evaluate the SymPy expression
             value = sp.sympify(expression)
             value = float(sp.N(value, 15))
-            if value > 2 or value < -2:
+            if value > 10 or value < -10:
                 print(entry_code)
                 continue
 
